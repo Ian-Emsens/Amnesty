@@ -8,7 +8,37 @@
     android:background="#ffffffff">
     <ImageView
         android:src="@drawable/logo"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:id="@+id/Logo"
+        android:layout_gravity="center_horizontal" />
+    <EditText
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView1" />
+        android:id="@+id/username"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffff00"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Username" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffff00"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Password" />
+    <Button
+        android:text="Login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/login"
+        android:textColor="#ff000000"
+        android:background="#ffffff00"
+        android:padding="10dp" />
 </LinearLayout>
