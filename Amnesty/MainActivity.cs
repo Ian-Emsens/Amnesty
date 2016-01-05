@@ -22,7 +22,7 @@ namespace Amnesty
 			//Toolbar will now take on default actionbar characteristics
 			//ActionBar = new ActionBar (toolbar);
 
-			toolbar.Title = "Hello from Appcompat Toolbar";
+			toolbar.Title = "Amnesties";
 			//..
 		}
 	}
