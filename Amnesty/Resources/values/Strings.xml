@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">Amnesty</string>
+	<string name="app_name">Amnesties</string>
+	<string name="username_instructions">This is used later in the app.</string>
+	<string name="password_instructions">This is just for flavor and because I wanted to use the strings file some more.</string>
 </resources>
