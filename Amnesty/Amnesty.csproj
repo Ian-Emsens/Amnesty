@@ -65,7 +65,8 @@
     </Compile>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Landing.cs" />
+    <Compile Include="LandingActivity.cs" />
+    <Compile Include="FormActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -288,6 +289,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_pencil_white_24dp.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_pencil_white_36dp.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_pencil_white_48dp.png" />
+    <AndroidResource Include="Resources\layout\Form_Personal.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

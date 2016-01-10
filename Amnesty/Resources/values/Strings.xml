@@ -6,8 +6,11 @@
 	<string name="error_empty">This field can not be empty.</string>
 	<string name="generic_hi">Hi, I\'m</string>
 	<string name="generic_continue">Continue</string>
-	<string name="ui_newDonation">Nieuwe Schenking</string>
-	<string name="ui_miss">Gemiste Schenking</string>
+	<string name="generic_next">Next</string>
+	<string name="form_intro">By submitting this form, you agree to donate a specified sum on a monthly basis for the benefit of Amnesty International.</string>
+	<string name="form_personal">Please fill in your personal information below.</string>
+	<string name="ui_newDonation">New Donation</string>
+	<string name="ui_miss">Miss</string>
 	<string name="yemen_title">Yemen</string>
 	<string name="yemen_desc">Government forces committed human rights violations, including unlawful killings and enforced disappearances, against supporters of secession in Yemen.</string>
 	<string name="yemen_01">A devastating air bombardment campaign launched in March 2015 by a Saudi Arabia-led coalition, acting at the behest of the internationally-recognized Yemeni government of President Abd Rabbu Mansour Hadi, has killed and injured hundreds of civilians in Yemen, many of them children.   </string>

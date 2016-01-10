@@ -75,11 +75,12 @@ namespace Amnesty
 
 		// Events
 			// FAB
+			// TODO: Normalize open/close function and disable scrollview
 			fab.Click += delegate {
 				// check if button is activated
 				if(!fab.Activated){
 
-					scrollview.CanScrollVertically(0);
+					// scrollview.CanScrollVertically(0); // Does Nothing
 					
 					actionOverlay.SetBackgroundColor(Android.Graphics.Color.Argb(180,0,0,0));
 					actionContainer.Visibility = Android.Views.ViewStates.Visible;
@@ -100,7 +101,7 @@ namespace Amnesty
 
 				}else{
 
-					scrollview.CanScrollVertically(1);
+					// scrollview.CanScrollVertically(1); // Does Nothing
 					
 					actionOverlay.SetBackgroundColor(Android.Graphics.Color.Argb(0,0,0,0));
 					actionContainer.Visibility = Android.Views.ViewStates.Gone;
@@ -120,6 +121,15 @@ namespace Amnesty
 					fab.Activated = false;
 
 				}
+
+				//New Donation
+				fabActionNew.Click += delegate {
+					var intent = new Intent (this, typeof(Form));
+					intent.PutExtra ("strCharityCountry", title.Text.ToString()); // IMPROV: Change to ID
+					intent.PutExtra ("strVolunteerName", intent.GetStringExtra("username")); // IMPROV: Change to ID
+					StartActivity (intent);
+				};
+
 			// End
 			};
 		}
