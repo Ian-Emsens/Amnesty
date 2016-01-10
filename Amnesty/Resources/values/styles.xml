@@ -15,7 +15,7 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="colorAccent">#FFED00</item>
-    <item name="colorControlNormal">#FFED00</item>
+    <item name="colorControlNormal">#333333</item>
     <item name="colorControlActivated">#000000</item>
      <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
