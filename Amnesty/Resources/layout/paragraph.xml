@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:text="Article"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18dip"
+    android:layout_marginBottom="12px"
+    android:layout_marginTop="12px"
+    android:paddingTop="24px"
+    android:paddingRight="0px"
+    android:paddingBottom="24px"
+    android:paddingLeft="0px"
+    android:layout_below="@id/background" />

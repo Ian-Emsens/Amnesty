@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">Amnesties</string>
-	<string name="username_instructions">This is used later in the app.</string>
-	<string name="password_instructions">This is just for flavor and because I wanted to use the strings file some more.</string>
+	<string name="instructions_username">This is used later in the app.</string>
+	<string name="instructions_password">This is just for flavor and because I wanted to use the strings file some more.</string>
+	<string name="error_empty">This field can not be empty.</string>
+	<string name="generic_hi">Hi, I\'m</string>
+	<string name="generic_continue">Continue</string>
+	<string name="yemen_01">A devastating air bombardment campaign launched in March 2015 by a Saudi Arabia-led coalition, acting at the behest of the internationally-recognized Yemeni government of President Abd Rabbu Mansour Hadi, has killed and injured hundreds of civilians in Yemen, many of them children.   </string>
+	<string name="yemen_02">The coalition has carried out thousands of airstrikes in areas controlled by the Huthis, a northern Yemen Zaidi Shia armed group, and armed forces loyal to former President Ali Abdullah Saleh. The Huthis forcibly took over the capital Sana’a in September 2014 and in the subsequent months gained control of large swathes of the country. </string>
+	<string name="yemen_03">Many coalition strikes have targeted military objectives but hundreds have struck civilian infrastructure including health facilities, schools, factories and power facilities, and bridges and roads. </string>
+	<string name="yemen_04">These strikes have not only killed and injured civilians and destroyed civilian property but have a grave and far reaching impact on access to health care, the delivery of humanitarian aid, on children’s education, and on the ability of civilians to provide for their families.  </string>
+	<string name="yemen_05">The conflict has had a brutal impact on education in Yemen; 34% of children in the country have not gone to school since the conflict began in March 2015. As of October 2015 1.8 million children were not in school. In some cases parents and children are deterred from going to school because of fear of airstrikes, while in others, schools have been rendered unusable due to the conflict either because they have been damaged or destroyed.</string>
 </resources>

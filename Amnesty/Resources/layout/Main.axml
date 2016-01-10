@@ -2,25 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/container"
     android:focusable="true"
     android:focusableInTouchMode="true">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <LinearLayout
-        android:id="@+id/main_content_container"
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/toolbar">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="300dip"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:id="@+id/main_content">
+            <ImageView
+                android:src="@drawable/logo_black_trans_large"
+                android:layout_width="fill_parent"
+                android:layout_height="247.7dp"
+                android:id="@+id/imageView1" />
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,14 +35,15 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="Username"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:inputType="textCapSentences" />
             </android.support.design.widget.TextInputLayout>
             <TextView
-                android:text="@string/username_instructions"
+                android:text="@string/instructions_username"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView1"
+                android:id="@+id/err_username"
                 android:textSize="10dip" />
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -53,11 +58,11 @@
                     android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
             <TextView
-                android:text="@string/password_instructions"
+                android:text="@string/instructions_password"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
+                android:id="@+id/err_password"
                 android:textSize="10dip" />
             <Button
                 android:id="@+id/submit"
@@ -66,8 +71,9 @@
                 android:layout_marginTop="20dip"
                 style="?android:attr/borderlessButtonStyle"
                 android:textColor="#ff000000"
-                android:text="Continue"
-                android:background="#ffffff00" />
+                android:text="@string/generic_continue"
+                android:background="#ffffff00"
+                android:layout_marginBottom="25dip" />
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
