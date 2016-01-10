@@ -59,7 +59,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="MainActivity.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </Compile>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Landing.cs" />
@@ -75,11 +78,6 @@
       <DeployService-Deploy>True</DeployService-Deploy>
     </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable\logo.png" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
@@ -89,15 +87,37 @@
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\logo_white_trans_small.png" />
     <AndroidResource Include="Resources\drawable\logo_white_trans_large.png" />
-    <AndroidResource Include="Resources\drawable\logo_black_trans_large.png" />
+    <AndroidResource Include="Resources\drawable\logo_black_trans_large.png">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\logo_black_trans_xs.png" />
     <AndroidResource Include="Resources\drawable\logo_black_trans_small.png" />
     <AndroidResource Include="Resources\layout\Landing.axml" />
+    <AndroidResource Include="Resources\drawable\xs.png" />
+    <AndroidResource Include="Resources\drawable\logo_black_trans_xs_nopad.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\background_yemen.png" />
+    <AndroidResource Include="Resources\layout\paragraph.xml" />
+    <AndroidResource Include="Resources\drawable\icon_plus.png" />
+    <AndroidResource Include="Resources\drawable\icon_plus_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\values-v21\" />
+    <Folder Include="Resources\mipmap-hdpi\" />
+    <Folder Include="Resources\mipmap-mdpi\" />
+    <Folder Include="Resources\mipmap-xhdpi\" />
+    <Folder Include="Resources\mipmap-xxhdpi\" />
+    <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\logo_black_trans_large.png" />
+  </ItemGroup>
 </Project>
