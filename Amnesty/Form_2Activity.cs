@@ -96,6 +96,11 @@ namespace Amnesty
 				x.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
 			}
 		}
+
+		public void populateIban(EditText a){
+			if(String.IsNullOrEmpty(a.EditableText.ToString()))
+				a.Text = a.Text + Resources.GetString(Resource.String.ui_iban);
+		}
 		
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -135,7 +140,7 @@ namespace Amnesty
 				newIntent.PutExtra ("strDonatorLastname", Intent.GetStringExtra("strDonatorLastname"));
 				newIntent.PutExtra ("strDonatorBirthdate", Intent.GetStringExtra("strDonatorBirthdate"));
 				newIntent.PutExtra ("strDonatorStreet", Intent.GetStringExtra("strDonatorStreet"));
-				newIntent.PutExtra ("strDonatorStreetNum", Intent.GetStringExtra("intDonatorStreetNum"));
+				newIntent.PutExtra ("strDonatorStreetNum", Intent.GetStringExtra("strDonatorStreetNum"));
 				newIntent.PutExtra ("strDonatorProvince", Intent.GetStringExtra("strDonatorProvince"));
 
 				newIntent.PutExtra ("strDonatorTel", telephone.EditableText.ToString());
@@ -170,6 +175,7 @@ namespace Amnesty
 
 			iban.FocusChange += delegate {
 				Activate (next, telephone, mail, iban);
+				populateIban(iban);
 			};
 		}
 	}

@@ -2849,32 +2849,35 @@ namespace Amnesty
 			// aapt resource value: 0x7f080013
 			public const int status_bar_notification_info_overflow = 2131230739;
 			
+			// aapt resource value: 0x7f080036
+			public const int ui_iban = 2131230774;
+			
 			// aapt resource value: 0x7f080035
 			public const int ui_miss = 2131230773;
 			
 			// aapt resource value: 0x7f080034
 			public const int ui_newDonation = 2131230772;
 			
-			// aapt resource value: 0x7f080038
-			public const int yemen_01 = 2131230776;
-			
 			// aapt resource value: 0x7f080039
-			public const int yemen_02 = 2131230777;
+			public const int yemen_01 = 2131230777;
 			
 			// aapt resource value: 0x7f08003a
-			public const int yemen_03 = 2131230778;
+			public const int yemen_02 = 2131230778;
 			
 			// aapt resource value: 0x7f08003b
-			public const int yemen_04 = 2131230779;
+			public const int yemen_03 = 2131230779;
 			
 			// aapt resource value: 0x7f08003c
-			public const int yemen_05 = 2131230780;
+			public const int yemen_04 = 2131230780;
+			
+			// aapt resource value: 0x7f08003d
+			public const int yemen_05 = 2131230781;
+			
+			// aapt resource value: 0x7f080038
+			public const int yemen_desc = 2131230776;
 			
 			// aapt resource value: 0x7f080037
-			public const int yemen_desc = 2131230775;
-			
-			// aapt resource value: 0x7f080036
-			public const int yemen_title = 2131230774;
+			public const int yemen_title = 2131230775;
 			
 			static String()
 			{

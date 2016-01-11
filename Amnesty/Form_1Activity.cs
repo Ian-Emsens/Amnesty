@@ -132,7 +132,7 @@ namespace Amnesty
 				newIntent.PutExtra ("strDonatorLastname", strDonatorLastname);
 				newIntent.PutExtra ("strDonatorBirthdate", strDonatorBirthdate);
 				newIntent.PutExtra ("strDonatorStreet", strDonatorStreet);
-				newIntent.PutExtra ("intDonatorStreetNum", strDonatorStreetNum);
+				newIntent.PutExtra ("strDonatorStreetNum", strDonatorStreetNum);
 				newIntent.PutExtra ("strDonatorProvince", strDonatorProvince);
 				
 				StartActivity (newIntent);	

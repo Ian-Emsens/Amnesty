@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/form_tel"
                     android:singleLine="true"
-                    android:inputType="number" />
+                    android:inputType="phone" />
             </android.support.design.widget.TextInputLayout>
             <TextView
                 android:text="@string/instructions_tel"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/form_mail"
                     android:singleLine="true"
-                    android:inputType="text" />
+                    android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
             <TextView
                 android:text="@string/instructions_mail"
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/form_iban"
                     android:singleLine="true"
-                    android:inputType="text" />
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
             <TextView
                 android:text="@string/instructions_iban"

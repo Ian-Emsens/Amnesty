@@ -32,6 +32,7 @@
 	<string name="form_overview">This is an overview of everything you\'ve entered. Read carefully to make sure everything is correct</string>
 	<string name="ui_newDonation">New Donation</string>
 	<string name="ui_miss">Miss</string>
+	<string name="ui_iban">IBAN BE</string>
 	<string name="yemen_title">Yemen</string>
 	<string name="yemen_desc">Government forces committed human rights violations, including unlawful killings and enforced disappearances, against supporters of secession in Yemen.</string>
 	<string name="yemen_01">A devastating air bombardment campaign launched in March 2015 by a Saudi Arabia-led coalition, acting at the behest of the internationally-recognized Yemeni government of President Abd Rabbu Mansour Hadi, has killed and injured hundreds of civilians in Yemen, many of them children.   </string>
