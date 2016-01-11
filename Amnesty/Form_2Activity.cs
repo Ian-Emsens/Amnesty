@@ -98,8 +98,11 @@ namespace Amnesty
 		}
 
 		public void populateIban(EditText a){
-			if(String.IsNullOrEmpty(a.EditableText.ToString()))
-				a.Text = a.Text + Resources.GetString(Resource.String.ui_iban);
+			if (String.IsNullOrEmpty (a.EditableText.ToString ())) {
+				a.Text = a.Text + Resources.GetString (Resource.String.ui_iban);
+			} else if (a.EditableText.Length() < 7) {
+				a.Text = Resources.GetString (Resource.String.ui_iban);
+			}
 		}
 		
 		protected override void OnCreate (Bundle bundle)
@@ -126,7 +129,7 @@ namespace Amnesty
 
 			// Button
 			// Disable button by default
-			next.Enabled = true; // DEBUG - switch to false
+			next.Enabled = false; // DEBUG - switch to false
 			next.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
 			next.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
 
@@ -171,6 +174,7 @@ namespace Amnesty
 			// Iban Field Validation
 			iban.TextChanged += delegate {
 				Activate (next, telephone, mail, iban);
+				populateIban(iban);
 			};
 
 			iban.FocusChange += delegate {

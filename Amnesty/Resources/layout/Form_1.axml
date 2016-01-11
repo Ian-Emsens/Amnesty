@@ -92,7 +92,7 @@
                     android:layout_weight=".80"
                     android:theme="@style/MyTheme"
                     android:layout_marginLeft="-5dp">
-                    <EditText
+                    <AutoCompleteTextView
                         android:id="@+id/street"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"

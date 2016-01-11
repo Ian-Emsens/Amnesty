@@ -82,14 +82,17 @@ namespace Amnesty
 			var lastname = FindViewById<EditText> (Resource.Id.lastname); 	// Name Field
 			var next = FindViewById<Button> (Resource.Id.next);				// Next Button
 			var birthdate = FindViewById<EditText> (Resource.Id.birthdate);	// Date Field
-			var street = FindViewById<EditText> (Resource.Id.street);
+			var street = FindViewById<AutoCompleteTextView> (Resource.Id.street);
 			var streetNum = FindViewById<EditText> (Resource.Id.streetNum);
 			var province = FindViewById<AutoCompleteTextView>(Resource.Id.province);
 
 			// Province Autocomplete
 			// TODO: optimize below into strings file with more completeness
-			var autoCompleteOptions = new String[] { "Mechelen", "Muizen", "Antwerpen", "Rijmenam", "Leuven", "Gent", "Brugge", "Hever", "Mettet", "Luik", "Brussel" };
-			ArrayAdapter autoCompleteAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteOptions);
+			var autoCompleteProvinceOptions = new String[] { "Mechelen", "Muizen", "Antwerpen", "Rijmenam", "Leuven", "Gent", "Brugge", "Hever", "Mettet", "Luik", "Brussel" };
+			ArrayAdapter autoCompleteProvinceAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteProvinceOptions);
+
+			var autoCompleteStreetOptions = new String[] { "Stationsstraat", "Kerkstraat", "Veldweg", "Slagersstraat", "Kapelstraat" };
+			ArrayAdapter autoCompleteStreetAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteStreetOptions);
 
 
 		// Toolbar
@@ -103,11 +106,12 @@ namespace Amnesty
 		// UI
 			// Populate
 			UpdateDisplay();
-			province.Adapter = autoCompleteAdapter;
+			province.Adapter = autoCompleteProvinceAdapter;
+			street.Adapter = autoCompleteStreetAdapter;
 			// Style
 
 			// Disable button by default
-			next.Enabled = true; // DEBUG - switch to false
+			next.Enabled = false; // DEBUG - switch to false
 			next.SetBackgroundColor (Android.Graphics.Color.Rgb(225,225,225));
 			next.SetTextColor (Android.Graphics.Color.Rgb(175,175,175));
 

@@ -7,9 +7,10 @@
 	<string name="instructions_mail">person@example.com</string>
 	<string name="instructions_iban">IBAN BE17 0635 3734 9520</string>
 	<string name="instructions_donation">Donations of 10€ or higher are more tax deducatable meaning you\'ll give more and pay less.</string>
-	<string name="error_empty">This field can not be empty.</string>
+	<string name="error_empty">This is required.</string>
 	<string name="error_unknown">An unknown error occured.</string>
-	<string name="error_format">This field is incorrect.</string>
+	<string name="error_format">Make sure your input is correct.</string>
+	<string name="error_length">Use at least 3 characters.</string>
 	<string name="generic_hi">Hi, I\'m</string>
 	<string name="generic_continue">Continue</string>
 	<string name="generic_next">Next</string>

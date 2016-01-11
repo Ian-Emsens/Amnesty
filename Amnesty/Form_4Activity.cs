@@ -61,7 +61,7 @@ namespace Amnesty
 			p7.Text = p7.Text + Intent.GetStringExtra("strDonatorTel");
 			p8.Text = p8.Text + Intent.GetStringExtra("strDonatorMail");
 			p9.Text = p9.Text + Intent.GetStringExtra("strDonatorIban");
-			p10.Text = p10.Text + Intent.GetStringExtra("strDonatorAmount");
+			p10.Text = p10.Text + Intent.GetStringExtra("strDonatorAmount")+"€";
 
 		// Submit - Click
 			submit.Click += delegate {

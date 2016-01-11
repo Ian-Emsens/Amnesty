@@ -22,8 +22,11 @@ namespace Amnesty
 
 		// Checks if there are any problems with any fields and enables the button to continue if there aren't
 		public Boolean Validate(EditText obj){
-			if (String.IsNullOrWhiteSpace(obj.Text)) {
-				obj.Error = Resources.GetString(Resource.String.error_empty);
+			if (String.IsNullOrWhiteSpace (obj.Text)) {
+				obj.Error = Resources.GetString (Resource.String.error_empty);
+				return false;
+			} else if (obj.Text.Length <= 2) {
+				obj.Error = Resources.GetString (Resource.String.error_length);
 				return false;
 			} else {
 				return true;
@@ -70,7 +73,7 @@ namespace Amnesty
 			password.InputType = Android.Text.InputTypes.TextVariationPassword | Android.Text.InputTypes.ClassText;
 
 			// Disable button by default
-			submit.Enabled = true; // DEBUG - switch to false
+			submit.Enabled = false; // DEBUG - switch to false
 			submit.SetBackgroundColor (Android.Graphics.Color.Rgb(225,225,225));
 			submit.SetTextColor (Android.Graphics.Color.Rgb(175,175,175));
 

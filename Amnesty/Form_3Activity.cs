@@ -66,7 +66,7 @@ namespace Amnesty
 
 			// Button
 			// Disable button by default
-			next.Enabled = true; // DEBUG - switch to false
+			next.Enabled = false; // DEBUG - switch to false
 			next.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
 			next.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
 
