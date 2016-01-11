@@ -30,12 +30,16 @@ namespace Amnesty
 			}
 		}
 
-		public void Activate(EditText a, EditText b){
+		public void Activate(Button x, EditText a, EditText b){
 			if (Validate(a) && Validate(b)) {
 				var submit = FindViewById<Button> (Resource.Id.submit);
 				submit.Enabled = true;
 				submit.SetBackgroundColor (Android.Graphics.Color.Rgb(255,237,0));
 				submit.SetTextColor (Android.Graphics.Color.Black);
+			} else if(x.Enabled) {
+				x.Enabled = false;
+				x.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
+				x.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
 			}
 		}
 
@@ -73,27 +77,27 @@ namespace Amnesty
 		// Events
 			// Submit - Click
 			submit.Click += delegate {
-				var landing = new Intent (this, typeof(Landing));
-				landing.PutExtra ("username", username.EditableText.ToString());
-				StartActivity (landing);
+				var newIntent = new Intent (this, typeof(Landing));
+				newIntent.PutExtra ("strVolunteerName", username.EditableText.ToString());
+				StartActivity (newIntent);
 			};
 
 			// Username Field Validation
 			username.TextChanged += delegate {
-				Activate(username,password);
+				Activate(submit, username,password);
 			};
 
 			username.FocusChange += delegate {
-				Activate(username,password);
+				Activate(submit, username,password);
 			};
 
 			// Password Field Validation
 			password.TextChanged += delegate {
-				Activate(username,password);
+				Activate(submit, username,password);
 			};
 
 			password.FocusChange += delegate {
-				Activate(username,password);
+				Activate(submit, username,password);
 			};
 		// End
 		}

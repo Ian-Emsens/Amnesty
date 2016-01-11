@@ -13,14 +13,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:orientation="vertical"
-        android:padding="50px">
+        android:orientation="vertical">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/main_content">
+            android:id="@+id/main_content"
+            android:padding="50px">
             <TextView
                 android:text="@string/form_intro"
                 android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                     android:id="@+id/name"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="@string/form_name"
                     android:singleLine="true"
                     android:inputType="textCapSentences" />
             </android.support.design.widget.TextInputLayout>
@@ -58,7 +58,7 @@
                     android:id="@+id/lastname"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Lastname"
+                    android:hint="@string/form_lastname"
                     android:singleLine="true"
                     android:inputType="textCapSentences" />
             </android.support.design.widget.TextInputLayout>
@@ -74,10 +74,59 @@
                     android:id="@+id/birthdate"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Birthdate"
+                    android:hint="@string/form_birthdate"
                     android:singleLine="true"
                     android:editable="false"
                     android:windowSoftInputMode="stateAlwaysHidden" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".80"
+                    android:theme="@style/MyTheme"
+                    android:layout_marginLeft="-5dp">
+                    <EditText
+                        android:id="@+id/street"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/form_street"
+                        android:singleLine="true"
+                        android:inputType="textCapSentences" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".20"
+                    android:theme="@style/MyTheme"
+                    android:layout_marginRight="-5dp">
+                    <EditText
+                        android:id="@+id/streetNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/form_number"
+                        android:singleLine="true"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyTheme"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-5dp">
+                <AutoCompleteTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/province"
+                    android:hint="@string/form_province"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
             <Button
                 android:id="@+id/next"

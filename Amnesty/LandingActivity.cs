@@ -124,10 +124,15 @@ namespace Amnesty
 
 				//New Donation
 				fabActionNew.Click += delegate {
-					var intent = new Intent (this, typeof(Form));
-					intent.PutExtra ("strCharityCountry", title.Text.ToString()); // IMPROV: Change to ID
-					intent.PutExtra ("strVolunteerName", intent.GetStringExtra("username")); // IMPROV: Change to ID
-					StartActivity (intent);
+					var strCharityCountry = title.Text.ToString();
+					var strVolunteerName = Intent.GetStringExtra("strVolunteerName");
+
+					var newIntent = new Intent (this, typeof(Form_1));
+
+					newIntent.PutExtra("strVolunteerName",strVolunteerName);
+					newIntent.PutExtra("strCharityCountry",strCharityCountry);
+
+					StartActivity (newIntent);
 				};
 
 			// End
