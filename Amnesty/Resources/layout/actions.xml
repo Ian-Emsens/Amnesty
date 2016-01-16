@@ -28,11 +28,10 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="23dp"
-            android:layout_marginBottom="81dp"
-            android:padding="5dp" />
+            android:layout_marginBottom="81dp" />
         <TextView
             android:id="@+id/subAction_1_tag"
-            android:text="label"
+            android:text="@string/ui_newDonation"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -52,10 +51,10 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="23dp"
             android:layout_marginBottom="131dp"
-            android:padding="10dp" />
+            android:padding="28dp" />
         <TextView
             android:id="@+id/subAction_2_tag"
-            android:text="label"
+            android:text="@string/ui_miss"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

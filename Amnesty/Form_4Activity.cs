@@ -67,6 +67,7 @@ namespace Amnesty
 			submit.Click += delegate {
 				var newIntent = new Intent (this, typeof(Landing));
 				newIntent.PutExtra ("strVolunteerName", Intent.GetStringExtra("strVolunteerName"));
+
 				StartActivity (newIntent);
 			};
 		}

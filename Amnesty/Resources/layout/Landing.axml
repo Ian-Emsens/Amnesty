@@ -80,6 +80,9 @@
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
-    <include
-        layout="@layout/actions" />
+    <fragment
+        class="Amnesty.actions"
+        android:id="@+id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

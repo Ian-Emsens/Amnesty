@@ -70,12 +70,14 @@
     <Compile Include="Form_2Activity.cs" />
     <Compile Include="Form_3Activity.cs" />
     <Compile Include="Form_4Activity.cs" />
+    <Compile Include="actions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="Resources\drawable\home.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -296,6 +298,66 @@
     <AndroidResource Include="Resources\layout\Form_2.axml" />
     <AndroidResource Include="Resources\layout\Form_3.axml" />
     <AndroidResource Include="Resources\layout\Form_4.axml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_black_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_black_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_black_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_grey600_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_grey600_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_grey600_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_grey600_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_white_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_home_white_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_black_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_black_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_black_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_grey600_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_grey600_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_grey600_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_grey600_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_white_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_home_white_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_black_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_black_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_black_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_grey600_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_grey600_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_grey600_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_grey600_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_white_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_home_white_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_black_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_black_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_black_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_grey600_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_grey600_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_grey600_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_grey600_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_white_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_home_white_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_black_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_black_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_black_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_grey600_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_grey600_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_grey600_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_grey600_48dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_white_18dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_white_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_home_white_48dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

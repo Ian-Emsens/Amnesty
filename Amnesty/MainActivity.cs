@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using supLib = Android.Support.V7;
 using supAppCompat = Android.Support.V7.AppCompat;
 using supToolbar = Android.Support.V7.Widget.Toolbar;
 using supDesign = Android.Support.Design;
@@ -20,62 +21,71 @@ namespace Amnesty
 	public class MainActivity : Activity
 	{
 
-		// Checks if there are any problems with any fields and enables the button to continue if there aren't
+		// Function that takes a given EditText element and determines its validation through boolean output
 		public Boolean Validate(EditText obj){
-			if (String.IsNullOrWhiteSpace (obj.Text)) {
+			if (String.IsNullOrWhiteSpace (obj.Text)) { // If no text or solely whitespaces are present
 				obj.Error = Resources.GetString (Resource.String.error_empty);
 				return false;
-			} else if (obj.Text.Length <= 2) {
+			} else if (obj.Text.Length <= 2) { // If the input is shorter than 3
 				obj.Error = Resources.GetString (Resource.String.error_length);
 				return false;
-			} else {
+			} else { // Everything's fine
 				return true;
 			}
 		}
 
-		public void Activate(Button x, EditText a, EditText b){
-			if (Validate(a) && Validate(b)) {
-				var submit = FindViewById<Button> (Resource.Id.submit);
-				submit.Enabled = true;
-				submit.SetBackgroundColor (Android.Graphics.Color.Rgb(255,237,0));
-				submit.SetTextColor (Android.Graphics.Color.Black);
-			} else if(x.Enabled) {
-				x.Enabled = false;
-				x.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
-				x.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
+		// Function that takes a button and an array of EditText elements and validates each one by the above function
+		public void Activate(Button button, EditText[] controls){
+			for (int i = 0; i < controls.Length; i++) {// run through all the controls
+				if(!Validate(controls[i])){ // check for false first
+					button.Enabled = false;
+					button.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
+					button.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
+					break; // Whenever a field fails to validate stop checking all the other fields. Performance & Bugfix
+				}else{
+					button.Enabled = true;
+					button.SetBackgroundColor (Android.Graphics.Color.Rgb(255,237,0));
+					button.SetTextColor (Android.Graphics.Color.Black);
+				}
 			}
 		}
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
 		// Variables
-			// UI
+			// Views
 			var toolbar = FindViewById<supToolbar> (Resource.Id.toolbar); 	// Toolbar
 			var username = FindViewById<EditText> (Resource.Id.username); 	// Username Field
 			var password = FindViewById<EditText> (Resource.Id.password); 	// Password Field
 			var submit = FindViewById<Button> (Resource.Id.submit); 		// Submit Button
 
-		// Toolbar
-			// Populate
-			toolbar.Title = Resources.GetString(Resource.String.app_name);
-			toolbar.SetLogo (Resource.Drawable.logo_black_trans_xs);
+			// Processing
+			EditText[] controls = new EditText[] {
+				username,password
+			};
 
-			// Styling
-			toolbar.SetTitleTextColor (Android.Graphics.Color.Black);
+			// Convenience
+			var black = Android.Graphics.Color.Black;
+			var gray = Android.Graphics.Color.Rgb (225, 225, 225);
+			var grey = Android.Graphics.Color.Rgb (175, 175, 175);
 
 		// UI
+			// Populate
+			toolbar.Title = Resources.GetString(Resource.String.app_name);
+
+			// Styling
+			toolbar.SetTitleTextColor (black);
+			submit.SetBackgroundColor (gray);
+			submit.SetTextColor (grey);
+
 			// Controls
 			password.InputType = Android.Text.InputTypes.TextVariationPassword | Android.Text.InputTypes.ClassText;
-
-			// Disable button by default
-			submit.Enabled = false; // DEBUG - switch to false
-			submit.SetBackgroundColor (Android.Graphics.Color.Rgb(225,225,225));
-			submit.SetTextColor (Android.Graphics.Color.Rgb(175,175,175));
+			submit.Enabled = false;
+			toolbar.Menu.Add (Resource.String.generic_cancel);
+			toolbar.SetNavigationIcon (Resource.Mipmap.ic_heart_black_36dp);
 
 		// Events
 			// Submit - Click
@@ -85,22 +95,22 @@ namespace Amnesty
 				StartActivity (newIntent);
 			};
 
-			// Username Field Validation
+			// Username
 			username.TextChanged += delegate {
-				Activate(submit, username,password);
+				Activate(submit, controls);
 			};
 
 			username.FocusChange += delegate {
-				Activate(submit, username,password);
+				Activate(submit, controls);
 			};
 
-			// Password Field Validation
+			// Password
 			password.TextChanged += delegate {
-				Activate(submit, username,password);
+				Activate(submit, controls);
 			};
 
 			password.FocusChange += delegate {
-				Activate(submit, username,password);
+				Activate(submit, controls);
 			};
 		// End
 		}

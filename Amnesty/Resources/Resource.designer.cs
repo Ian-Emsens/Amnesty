@@ -1792,11 +1792,11 @@ namespace Amnesty
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0700a7
-			public const int Logo = 2131165351;
+			// aapt resource value: 0x7f0700a8
+			public const int Logo = 2131165352;
 			
-			// aapt resource value: 0x7f0700a9
-			public const int action0 = 2131165353;
+			// aapt resource value: 0x7f0700aa
+			public const int action0 = 2131165354;
 			
 			// aapt resource value: 0x7f07006b
 			public const int actionContainer = 2131165291;
@@ -1828,8 +1828,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f07005b
 			public const int action_context_bar = 2131165275;
 			
-			// aapt resource value: 0x7f0700ad
-			public const int action_divider = 2131165357;
+			// aapt resource value: 0x7f0700ae
+			public const int action_divider = 2131165358;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -1845,6 +1845,9 @@ namespace Amnesty
 			
 			// aapt resource value: 0x7f07003c
 			public const int action_mode_close_button = 2131165244;
+			
+			// aapt resource value: 0x7f0700a2
+			public const int actions = 2131165346;
 			
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
@@ -1876,8 +1879,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
-			// aapt resource value: 0x7f0700aa
-			public const int cancel_action = 2131165354;
+			// aapt resource value: 0x7f0700ab
+			public const int cancel_action = 2131165355;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -1891,8 +1894,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070052
 			public const int checkbox = 2131165266;
 			
-			// aapt resource value: 0x7f0700b0
-			public const int chronometer = 2131165360;
+			// aapt resource value: 0x7f0700b1
+			public const int chronometer = 2131165361;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -1948,8 +1951,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f07001b
 			public const int end = 2131165211;
 			
-			// aapt resource value: 0x7f0700b5
-			public const int end_padder = 2131165365;
+			// aapt resource value: 0x7f0700b6
+			public const int end_padder = 2131165366;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
@@ -1957,11 +1960,11 @@ namespace Amnesty
 			// aapt resource value: 0x7f070024
 			public const int enterAlwaysCollapsed = 2131165220;
 			
-			// aapt resource value: 0x7f0700a6
-			public const int err_password = 2131165350;
+			// aapt resource value: 0x7f0700a7
+			public const int err_password = 2131165351;
 			
-			// aapt resource value: 0x7f0700a4
-			public const int err_username = 2131165348;
+			// aapt resource value: 0x7f0700a5
+			public const int err_username = 2131165349;
 			
 			// aapt resource value: 0x7f070025
 			public const int exitUntilCollapsed = 2131165221;
@@ -2002,11 +2005,11 @@ namespace Amnesty
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f0700a2
-			public const int imageView1 = 2131165346;
+			// aapt resource value: 0x7f0700a3
+			public const int imageView1 = 2131165347;
 			
-			// aapt resource value: 0x7f0700b4
-			public const int info = 2131165364;
+			// aapt resource value: 0x7f0700b5
+			public const int info = 2131165365;
 			
 			// aapt resource value: 0x7f07008b
 			public const int instructions_donation = 2131165323;
@@ -2032,11 +2035,11 @@ namespace Amnesty
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f0700ae
-			public const int line1 = 2131165358;
+			// aapt resource value: 0x7f0700af
+			public const int line1 = 2131165359;
 			
-			// aapt resource value: 0x7f0700b2
-			public const int line3 = 2131165362;
+			// aapt resource value: 0x7f0700b3
+			public const int line3 = 2131165363;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
@@ -2044,8 +2047,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f0700a8
-			public const int login = 2131165352;
+			// aapt resource value: 0x7f0700a9
+			public const int login = 2131165353;
 			
 			// aapt resource value: 0x7f070085
 			public const int mail = 2131165317;
@@ -2059,8 +2062,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f07009a
 			public const int main_content_container = 2131165338;
 			
-			// aapt resource value: 0x7f0700ac
-			public const int media_actions = 2131165356;
+			// aapt resource value: 0x7f0700ad
+			public const int media_actions = 2131165357;
 			
 			// aapt resource value: 0x7f07001c
 			public const int middle = 2131165212;
@@ -2143,8 +2146,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070046
 			public const int parentPanel = 2131165254;
 			
-			// aapt resource value: 0x7f0700a5
-			public const int password = 2131165349;
+			// aapt resource value: 0x7f0700a6
+			public const int password = 2131165350;
 			
 			// aapt resource value: 0x7f07007b
 			public const int personal = 2131165307;
@@ -2260,8 +2263,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f0700ab
-			public const int status_bar_latest_event_content = 2131165355;
+			// aapt resource value: 0x7f0700ac
+			public const int status_bar_latest_event_content = 2131165356;
 			
 			// aapt resource value: 0x7f07007f
 			public const int street = 2131165311;
@@ -2293,17 +2296,17 @@ namespace Amnesty
 			// aapt resource value: 0x7f070083
 			public const int telephone = 2131165315;
 			
-			// aapt resource value: 0x7f0700b3
-			public const int text = 2131165363;
+			// aapt resource value: 0x7f0700b4
+			public const int text = 2131165364;
 			
-			// aapt resource value: 0x7f0700b1
-			public const int text2 = 2131165361;
+			// aapt resource value: 0x7f0700b2
+			public const int text2 = 2131165362;
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
 			
-			// aapt resource value: 0x7f0700af
-			public const int time = 2131165359;
+			// aapt resource value: 0x7f0700b0
+			public const int time = 2131165360;
 			
 			// aapt resource value: 0x7f070043
 			public const int title = 2131165251;
@@ -2326,8 +2329,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f070014
 			public const int useLogo = 2131165204;
 			
-			// aapt resource value: 0x7f0700a3
-			public const int username = 2131165347;
+			// aapt resource value: 0x7f0700a4
+			public const int username = 2131165348;
 			
 			// aapt resource value: 0x7f07000a
 			public const int view_offset_helper = 2131165194;
@@ -2642,43 +2645,79 @@ namespace Amnesty
 			public const int ic_heart_white_48dp = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int ic_launcher = 2130903064;
+			public const int ic_home_black_18dp = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int ic_pencil_black_18dp = 2130903065;
+			public const int ic_home_black_24dp = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int ic_pencil_black_24dp = 2130903066;
+			public const int ic_home_black_36dp = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int ic_pencil_black_36dp = 2130903067;
+			public const int ic_home_black_48dp = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int ic_pencil_black_48dp = 2130903068;
+			public const int ic_home_grey600_18dp = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int ic_pencil_grey600_18dp = 2130903069;
+			public const int ic_home_grey600_24dp = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int ic_pencil_grey600_24dp = 2130903070;
+			public const int ic_home_grey600_36dp = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int ic_pencil_grey600_36dp = 2130903071;
+			public const int ic_home_grey600_48dp = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int ic_pencil_grey600_48dp = 2130903072;
+			public const int ic_home_white_18dp = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int ic_pencil_white_18dp = 2130903073;
+			public const int ic_home_white_24dp = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int ic_pencil_white_24dp = 2130903074;
+			public const int ic_home_white_36dp = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int ic_pencil_white_36dp = 2130903075;
+			public const int ic_home_white_48dp = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int ic_pencil_white_48dp = 2130903076;
+			public const int ic_launcher = 2130903076;
+			
+			// aapt resource value: 0x7f030025
+			public const int ic_pencil_black_18dp = 2130903077;
+			
+			// aapt resource value: 0x7f030026
+			public const int ic_pencil_black_24dp = 2130903078;
+			
+			// aapt resource value: 0x7f030027
+			public const int ic_pencil_black_36dp = 2130903079;
+			
+			// aapt resource value: 0x7f030028
+			public const int ic_pencil_black_48dp = 2130903080;
+			
+			// aapt resource value: 0x7f030029
+			public const int ic_pencil_grey600_18dp = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int ic_pencil_grey600_24dp = 2130903082;
+			
+			// aapt resource value: 0x7f03002b
+			public const int ic_pencil_grey600_36dp = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int ic_pencil_grey600_48dp = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int ic_pencil_white_18dp = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int ic_pencil_white_24dp = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int ic_pencil_white_36dp = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int ic_pencil_white_48dp = 2130903088;
 			
 			static Mipmap()
 			{
