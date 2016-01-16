@@ -78,6 +78,9 @@
                     android:id="@+id/paragraph_05"
                     layout="@layout/paragraph" />
             </LinearLayout>
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
         </RelativeLayout>
     </ScrollView>
     <fragment

@@ -20,6 +20,7 @@ namespace Amnesty
 	[Activity (Label = "Landing")]			
 	public class Landing : Activity
 	{
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -31,7 +32,9 @@ namespace Amnesty
 
 		// Variables
 			// UI
+			var toolbar = FindViewById<supToolbar> (Resource.Id.toolbar);
 			var scrollview = FindViewById<ScrollView> (Resource.Id.scrollview);
+			var container = FindViewById<RelativeLayout> (Resource.Id.container);
 
 			// Content
 			var title = FindViewById<TextView> (Resource.Id.title);
@@ -45,6 +48,14 @@ namespace Amnesty
 			// Fragment UI - Amnesty.actions.cs
 			var fabActionNew = FindViewById<supFAB> (Resource.Id.subAction_1);
 
+		// UI
+			// Populate
+			toolbar.Menu.Add (Resource.String.generic_cancel);
+
+			// Styling
+			toolbar.OverflowIcon = Resources.GetDrawable (Resource.Mipmap.ic_dots_vertical_black_24dp);
+			toolbar.SetBackgroundColor (Android.Graphics.Color.Transparent);
+
 		// Content
 			// TODO: check string files of occurences of 'yemen_' and insert & populate X number in view
 			title.Text = Resources.GetString(Resource.String.yemen_title);
@@ -55,17 +66,27 @@ namespace Amnesty
 			p4.Text = Resources.GetString(Resource.String.yemen_04);
 			p5.Text = Resources.GetString(Resource.String.yemen_05);
 
+		// Events
 			//New Donation
 			fabActionNew.Click += delegate {
-				var strCharityCountry = title.Text.ToString();
-				var strVolunteerName = Intent.GetStringExtra("strVolunteerName");
+				var strCharityCountry = title.Text.ToString ();
+				var strVolunteerName = Intent.GetStringExtra ("strVolunteerName");
 
 				var newIntent = new Intent (this, typeof(Form_1));
 
-				newIntent.PutExtra("strVolunteerName",strVolunteerName);
-				newIntent.PutExtra("strCharityCountry",strCharityCountry);
+				newIntent.PutExtra ("strVolunteerName", strVolunteerName);
+				newIntent.PutExtra ("strCharityCountry", strCharityCountry);
 
 				StartActivity (newIntent);
+			};
+
+			title.LongClick += delegate {
+				PopupMenu menu = new PopupMenu (this, title);
+				menu.Inflate(Resource.Menu.logoutMenu);
+				menu.MenuItemClick += delegate(object sender, PopupMenu.MenuItemClickEventArgs e) {
+					Console.WriteLine(e.Item.TitleFormatted);
+				};
+				menu.Show();
 			};
 
 			// End
