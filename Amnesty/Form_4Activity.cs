@@ -18,6 +18,7 @@ using supDesign = Android.Support.Design;
 
 namespace Amnesty
 {
+
 	[Activity (Label = "Form_4")]			
 	public class Form_4 : Activity
 	{

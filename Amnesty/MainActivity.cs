@@ -34,6 +34,7 @@ namespace Amnesty
 				return false;
 			} else { // Everything's fine
 				obj.ErrorEnabled = false;
+				obj.Error = null;
 				return true;
 			}
 		}
@@ -42,9 +43,12 @@ namespace Amnesty
 		public void Activate(Button button, supEditText[] controls){
 			for (int i = 0; i < controls.Length; i++) {// run through all the controls
 				if(!Validate(controls[i])){ // check for false first
-					button.Enabled = false;
-					button.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
-					button.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
+					if (button.Enabled) {
+						button.Enabled = false;
+						button.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
+						button.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
+						break; // Disabled the button, no need to keep looping
+					}
 					break; // Whenever a field fails to validate stop checking all the other fields. Performance & Bugfix
 				}else{
 					button.Enabled = true;
@@ -104,20 +108,22 @@ namespace Amnesty
 
 			// Username
 			usernameInput.TextChanged += delegate {
-				Activate(submit, controls);
-			};
-
-			usernameInput.FocusChange += delegate {
-				Activate(submit, controls);
+				if(usernameInput.HasFocus){
+					Activate(submit, controls);
+				}
 			};
 
 			// Password
 			passwordInput.TextChanged += delegate {
-				Activate(submit, controls);
+				if(passwordInput.HasFocus){
+					Activate(submit, controls);
+				}
 			};
 
-			passwordInput.FocusChange += delegate {
-				Activate(submit, controls);
+			// Testing
+			toolbar.Click += delegate {
+				DialogFragment newFragment = new NumberPickerFragment();
+				newFragment.Show(FragmentManager,"timePicker");
 			};
 		// End
 		}
@@ -137,12 +143,16 @@ namespace Amnesty
 			submit.Enabled = false;
 
 			var username = FindViewById<supEditText> (Resource.Id.username);
-			username.EditText.Text = "";
+			username.EditText.EditableText.Clear ();
 			username.EditText.ClearFocus();
 
 			var password = FindViewById<supEditText> (Resource.Id.password);
-			password.EditText.Text = "";
+			password.EditText.EditableText.Clear ();
 			password.EditText.ClearFocus();
+
+			// disable errors after all events have been called to avoid TextChanged firing and showing error on username
+			username.ErrorEnabled = false;
+			password.ErrorEnabled = false;
 		}
 	}
 }

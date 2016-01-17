@@ -71,6 +71,7 @@
     <Compile Include="Form_3Activity.cs" />
     <Compile Include="Form_4Activity.cs" />
     <Compile Include="actions.cs" />
+    <Compile Include="NumberPicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

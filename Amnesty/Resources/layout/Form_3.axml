@@ -54,6 +54,11 @@
                 android:layout_marginTop="-5dp"
                 android:id="@+id/instructions_donation"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center" />
             <Button
                 android:id="@+id/next"
                 android:layout_width="wrap_content"
