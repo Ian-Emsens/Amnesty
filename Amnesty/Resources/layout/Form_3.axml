@@ -38,33 +38,171 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/amount"
                     android:layout_marginTop="10dp" />
-                <android.support.design.widget.TextInputLayout
+            <!-- Start Money -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/MyTheme"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="200dip"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".15" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".70">
+                        <EditText
+                            android:id="@+id/donation"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:gravity="center"
+                            android:text="10€"
+                            android:textSize="50dip"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".15" />
+                </LinearLayout>
+            <!-- End Money -->
+            <!-- Start Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="-5dp"
-                    android:layout_marginRight="-5dp">
-                    <EditText
-                        android:id="@+id/donation"
+                    android:maxWidth="200dip"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".10">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dip"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="0" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".80">
+                        <SeekBar
+                            android:id="@+id/donationBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_gravity="center_vertical"
+                            android:max="50" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".10">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dip"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="50" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/deductability"
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="-15dip"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="@string/notice_deductable"
+                    android:textSize="10dip"
+                    android:textColor="@android:color/holo_green_light" />
+            <!-- End Bar -->
+            <!-- Start Generated -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="200dip"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/form_donation"
-                        android:singleLine="true"
-                        android:inputType="numberDecimal" />
-                </android.support.design.widget.TextInputLayout>
+                        android:layout_weight=".50">
+                        <TextView
+                            android:id="@+id/yearlyDonation"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="0" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50">
+                        <TextView
+                            android:id="@+id/orphanCounter"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:maxWidth="200dip"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50">
+                        <TextView
+                            android:id="@+id/yearlyDonation"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/ui_yearly" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50">
+                        <TextView
+                            android:id="@+id/yearlyDonation"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/ui_orphans" />
+                    </LinearLayout>
+                </LinearLayout>
+            <!-- End Generated -->
                 <TextView
                     android:text="@string/instructions_donation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/instructions_donation"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-                <NumberPicker
-                    android:id="@+id/numberPicker"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center" />
                 <Button
                     android:id="@+id/next"
                     android:layout_width="wrap_content"

@@ -55,7 +55,9 @@ namespace Amnesty
 
 		// UI
 			// Populate
-			toolbar.Menu.Add (Resource.String.generic_cancel);
+			toolbar.Menu.Add (Resource.String.menu_language);
+			toolbar.Menu.Add (Resource.String.menu_options);
+			toolbar.Menu.Add (Resource.String.generic_logout);
 
 			// Styling
 			toolbar.OverflowIcon = Resources.GetDrawable (Resource.Mipmap.ic_dots_vertical_black_24dp);
@@ -101,9 +103,6 @@ namespace Amnesty
 			DrawerLayout drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
 			NavigationView navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
 			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
-
-			// Styling
-			navigationView.SetItemTextAppearance();
 
 			// Populate
 			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);

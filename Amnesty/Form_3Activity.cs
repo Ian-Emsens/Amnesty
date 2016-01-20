@@ -48,6 +48,20 @@ namespace Amnesty
 			}
 		}
 
+		public void UpdateDisplay(string x){
+			var donation = FindViewById<EditText> (Resource.Id.donation);
+			var yearly = FindViewById<TextView> (Resource.Id.yearlyDonation);
+			var orphans = FindViewById<TextView> (Resource.Id.orphanCounter);
+
+			donation.Text = x+"€";
+
+			int yearCash = Int32.Parse (x) * 12;
+			float orphanCount = float.Parse (x) / 30;
+
+			yearly.Text = yearCash.ToString("'€' #,00");
+			orphans.Text = orphanCount.ToString ("N");
+		}
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -58,11 +72,14 @@ namespace Amnesty
 			var toolbar = FindViewById<supToolbar> (Resource.Id.toolbar); 	// Toolbar
 			var next = FindViewById<Button> (Resource.Id.next);				// Next Button
 			var donation = FindViewById<EditText> (Resource.Id.donation);	// Amount Field
+			var donationBar = FindViewById<SeekBar> (Resource.Id.donationBar);
+			var deductability = FindViewById<TextView> (Resource.Id.deductability);
 
 			// UI
 			// Toolbar
 			// Populate
 			toolbar.Title = Resources.GetString (Resource.String.app_name);
+			donationBar.Progress = 10;
 
 			// Styling
 			toolbar.SetTitleTextColor (Android.Graphics.Color.Black);
@@ -100,6 +117,29 @@ namespace Amnesty
 			};
 			donation.TextChanged += delegate {
 				Activate(next, donation);
+			};
+
+			donationBar.ProgressChanged += delegate {
+				donationBar.RequestFocus();
+
+				if(donationBar.Progress < 2){
+					donationBar.Progress = 2;
+				}else{
+					UpdateDisplay(donationBar.Progress.ToString());
+				}
+
+				if(donationBar.Progress < 5){
+					deductability.Text = Resources.GetString(Resource.String.notice_non_deductable);
+					deductability.SetTextColor(Resources.GetColor(Android.Resource.Color.HoloRedDark));
+				}else{
+					deductability.Text = Resources.GetString(Resource.String.notice_deductable);
+					deductability.SetTextColor(Resources.GetColor(Android.Resource.Color.HoloGreenLight));
+				}
+
+				if(donationBar.Progress == donationBar.Max){
+					deductability.Text = Resources.GetString(Resource.String.notice_thanks);
+					deductability.SetTextColor(Resources.GetColor(Android.Resource.Color.HoloBlueBright));
+				}
 			};
 		// Menu Psuedo-fragment
 			// Variables

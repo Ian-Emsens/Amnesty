@@ -87,6 +87,8 @@ namespace Amnesty
 		// UI
 			// Populate
 			toolbar.Title = Resources.GetString(Resource.String.app_name);
+			toolbar.Menu.Add (Resource.String.menu_language);
+			toolbar.Menu.Add (Resource.String.menu_options);
 
 			// Styling
 			toolbar.SetTitleTextColor (black);
@@ -95,7 +97,6 @@ namespace Amnesty
 			passwordInput.InputType = Android.Text.InputTypes.TextVariationPassword | Android.Text.InputTypes.ClassText;
 
 			// Testing
-			toolbar.Menu.Add (Resource.String.generic_cancel);
 			toolbar.OverflowIcon = Resources.GetDrawable(Resource.Mipmap.ic_dots_vertical_black_24dp);
 
 		// Events
