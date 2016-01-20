@@ -16,6 +16,8 @@ using supAppCompat = Android.Support.V7.AppCompat;
 using supToolbar = Android.Support.V7.Widget.Toolbar;
 using supFAB = Android.Support.Design.Widget.FloatingActionButton;
 using supDesign = Android.Support.Design;
+using DrawerLayout = Android.Support.V4.Widget.DrawerLayout;
+using NavigationView = Android.Support.Design.Widget.NavigationView;
 
 namespace Amnesty
 {
@@ -122,7 +124,6 @@ namespace Amnesty
 			// Toolbar
 			// Populate
 			toolbar.Title = Resources.GetString (Resource.String.app_name);
-			toolbar.SetLogo (Resource.Drawable.logo_black_trans_xs);
 
 			// Styling
 			toolbar.SetTitleTextColor (Android.Graphics.Color.Black);
@@ -180,6 +181,31 @@ namespace Amnesty
 			iban.FocusChange += delegate {
 				Activate (next, telephone, mail, iban);
 				populateIban(iban);
+			};
+		// Menu Psuedo-fragment
+			// Variables
+			DrawerLayout drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
+			NavigationView navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
+			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
+
+			// Populate
+			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);
+
+			// Events
+			toolbar.NavigationClick += delegate {
+				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			};
+
+			// Populate the username once we're sure the header has been inflated
+			navHeader.ViewAttachedToWindow += delegate {
+				var navUsername = FindViewById<TextView> (Resource.Id.nav_username);
+				navUsername.Text = Intent.GetStringExtra ("strVolunteerName") ?? "DEBUG MODE";
+			};
+
+			navigationView.NavigationItemSelected += (sender, e) => {
+				e.MenuItem.SetChecked (true);
+				Console.WriteLine(e.MenuItem.TitleFormatted.ToString());
+				drawerLayout.CloseDrawers ();
 			};
 		}
 	}

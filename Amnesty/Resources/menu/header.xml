@@ -10,4 +10,13 @@
     android:layout_width="match_parent"
     android:layout_height="178dp"
     android:scaleType="centerCrop"/>
+    <TextView
+	android:id="@+id/nav_username"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:padding="15dp"
+	android:text="Username"
+	android:textColor="@android:color/white"
+	android:textSize="36dip" />
 </RelativeLayout>

@@ -65,16 +65,19 @@ namespace Amnesty
 					// + -> x animation
 					var anim = Android.Views.Animations.AnimationUtils.LoadAnimation (t, Resource.Animation.rotate_45);
 					anim.FillAfter = true; //keep endState of animation
+					// fade animation
+					var fade = Android.Views.Animations.AnimationUtils.LoadAnimation (t, Resource.Animation.abc_fade_in);
+					fade.FillAfter = true;
 
 					// trigger animations
 					fab.StartAnimation (anim);
 					actionContainer.StartAnimation (slide);
+					actionOverlay.StartAnimation (fade);
 
 					//change state
 					fab.Activated = true;
 				} else {
 				// Styling
-					actionOverlay.SetBackgroundColor (Android.Graphics.Color.Transparent);
 					actionContainer.Visibility = Android.Views.ViewStates.Gone;
 
 				// Animations
@@ -83,10 +86,14 @@ namespace Amnesty
 					// x -> + animation
 					var anim = Android.Views.Animations.AnimationUtils.LoadAnimation (t, Resource.Animation.rotate_m45);
 					anim.FillAfter = true; //keep endState of animation
+					// fade animation
+					var fade = Android.Views.Animations.AnimationUtils.LoadAnimation (t, Resource.Animation.abc_fade_out);
+					fade.FillAfter = true;
 
 					//trigger animations
 					fab.StartAnimation (anim);
 					actionContainer.StartAnimation (slide);
+					actionOverlay.StartAnimation (fade);
 
 					//change state
 					fab.Activated = false;

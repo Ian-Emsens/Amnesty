@@ -24,8 +24,6 @@ namespace Amnesty
 	[Activity (Label = "Landing")]			
 	public class Landing : Activity
 	{
-		DrawerLayout drawerLayout;
-		NavigationView navigationView;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -42,11 +40,6 @@ namespace Amnesty
 			var scrollview = FindViewById<ScrollView> (Resource.Id.scrollview);
 			var container = FindViewById<RelativeLayout> (Resource.Id.container);
 			var mcContainer = FindViewById<LinearLayout> (Resource.Id.main_content_container);
-
-			// Menu
-			drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
-			navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
-			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
 
 			// Content
 			var title = FindViewById<TextView> (Resource.Id.title);
@@ -65,7 +58,6 @@ namespace Amnesty
 			toolbar.Menu.Add (Resource.String.generic_cancel);
 
 			// Styling
-			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);
 			toolbar.OverflowIcon = Resources.GetDrawable (Resource.Mipmap.ic_dots_vertical_black_24dp);
 			toolbar.SetBackgroundColor (Android.Graphics.Color.Transparent);
 
@@ -83,7 +75,7 @@ namespace Amnesty
 			p5.Text = Resources.GetString(Resource.String.yemen_05);
 
 		// Events
-			//New Donation
+			// New Donation
 			fabActionNew.Click += delegate {
 				var strCharityCountry = title.Text.ToString ();
 				var strVolunteerName = Intent.GetStringExtra ("strVolunteerName");
@@ -104,9 +96,24 @@ namespace Amnesty
 				};
 				menu.Show();
 			};
+		// Menu Psuedo-fragment
+			// Variables
+			DrawerLayout drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
+			NavigationView navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
+			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
 
+			// Populate
+			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);
+
+			// Events
 			toolbar.NavigationClick += delegate {
 				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			};
+
+			// Populate the username once we're sure the header has been inflated
+			navHeader.ViewAttachedToWindow += delegate {
+				var navUsername = FindViewById<TextView> (Resource.Id.nav_username);
+				navUsername.Text = Intent.GetStringExtra ("strVolunteerName") ?? "DEBUG MODE";
 			};
 
 			navigationView.NavigationItemSelected += (sender, e) => {
