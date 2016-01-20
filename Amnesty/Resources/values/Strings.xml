@@ -17,6 +17,8 @@
 	<string name="generic_donate">Donate</string>
 	<string name="generic_cancel">Cancel</string>
 	<string name="generic_logout">Logout</string>
+	<string name="generic_catalog">Catalog</string>
+	<string name="generic_queue">Queue</string>
 	<string name="form_street">Street</string>
 	<string name="form_number">Number</string>
 	<string name="form_province">Province</string>

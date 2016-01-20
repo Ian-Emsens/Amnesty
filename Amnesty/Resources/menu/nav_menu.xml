@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<group
+	android:checkableBehavior="single">
+		<item
+		android:id="@+id/nav_home"
+		android:icon="@mipmap/ic_book_open_variant_grey600_18dp"
+		android:title="@string/generic_catalog" />
+		<item
+		android:id="@+id/nav_queue"
+		android:icon="@mipmap/ic_format_list_bulleted_grey600_18dp"
+		android:title="@string/generic_queue" />
+	</group>
+	<item
+	android:title="Charities"
+	android:id="@+id/nav_charities">
+		<menu>
+			<item
+			android:id="@+id/nav_sub_yemen"
+			android:icon="@mipmap/ic_heart_grey600_18dp"
+			android:title="Yemen" />
+			<item
+			android:id="@+id/nav_sub_syria"
+			android:icon="@mipmap/ic_heart_grey600_18dp"
+			android:title="Syria" />
+		</menu>
+	</item>
+</menu>

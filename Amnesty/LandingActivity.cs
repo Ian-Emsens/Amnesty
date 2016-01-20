@@ -10,16 +10,22 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using Android.Support.V7;
+
 using supAppCompat = Android.Support.V7.AppCompat;
 using supToolbar = Android.Support.V7.Widget.Toolbar;
 using supFAB = Android.Support.Design.Widget.FloatingActionButton;
 using supDesign = Android.Support.Design;
+using DrawerLayout = Android.Support.V4.Widget.DrawerLayout;
+using NavigationView = Android.Support.Design.Widget.NavigationView;
 
 namespace Amnesty
 {
 	[Activity (Label = "Landing")]			
 	public class Landing : Activity
 	{
+		DrawerLayout drawerLayout;
+		NavigationView navigationView;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -35,6 +41,12 @@ namespace Amnesty
 			var toolbar = FindViewById<supToolbar> (Resource.Id.toolbar);
 			var scrollview = FindViewById<ScrollView> (Resource.Id.scrollview);
 			var container = FindViewById<RelativeLayout> (Resource.Id.container);
+			var mcContainer = FindViewById<LinearLayout> (Resource.Id.main_content_container);
+
+			// Menu
+			drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
+			navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
+			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
 
 			// Content
 			var title = FindViewById<TextView> (Resource.Id.title);
@@ -53,8 +65,12 @@ namespace Amnesty
 			toolbar.Menu.Add (Resource.String.generic_cancel);
 
 			// Styling
+			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);
 			toolbar.OverflowIcon = Resources.GetDrawable (Resource.Mipmap.ic_dots_vertical_black_24dp);
 			toolbar.SetBackgroundColor (Android.Graphics.Color.Transparent);
+
+			// Positioning
+			mcContainer.SetPadding(0,toolbar.MinimumHeight,0,0);
 
 		// Content
 			// TODO: check string files of occurences of 'yemen_' and insert & populate X number in view
@@ -87,6 +103,16 @@ namespace Amnesty
 					Console.WriteLine(e.Item.TitleFormatted);
 				};
 				menu.Show();
+			};
+
+			toolbar.NavigationClick += delegate {
+				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			};
+
+			navigationView.NavigationItemSelected += (sender, e) => {
+				e.MenuItem.SetChecked (true);
+				Console.WriteLine(e.MenuItem.TitleFormatted.ToString());
+				drawerLayout.CloseDrawers ();
 			};
 
 			// End

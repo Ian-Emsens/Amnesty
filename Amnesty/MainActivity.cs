@@ -140,7 +140,7 @@ namespace Amnesty
 			var submit = FindViewById<Button> (Resource.Id.submit);
 			submit.SetBackgroundColor (gray);
 			submit.SetTextColor (grey);
-			submit.Enabled = false;
+			submit.Enabled = true; // DEBUG
 
 			var username = FindViewById<supEditText> (Resource.Id.username);
 			username.EditText.EditableText.Clear ();
