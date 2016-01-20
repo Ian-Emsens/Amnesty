@@ -102,6 +102,9 @@ namespace Amnesty
 			NavigationView navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
 			var navHeader = navigationView.InflateHeaderView (Resource.Menu.header);
 
+			// Styling
+			navigationView.SetItemTextAppearance();
+
 			// Populate
 			toolbar.NavigationIcon = Resources.GetDrawable (Resource.Mipmap.ic_menu_black_24dp);
 
@@ -110,14 +113,18 @@ namespace Amnesty
 				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
 			};
 
-			// Populate the username once we're sure the header has been inflated
+			// Populate the menu once we're sure the header has been inflated
 			navHeader.ViewAttachedToWindow += delegate {
 				var navUsername = FindViewById<TextView> (Resource.Id.nav_username);
 				navUsername.Text = Intent.GetStringExtra ("strVolunteerName") ?? "DEBUG MODE";
 			};
 
+			drawerLayout.ViewAttachedToWindow += delegate {
+				navigationView.SetCheckedItem (Resource.Id.nav_home);
+				navigationView.SetCheckedItem (Resource.Id.nav_sub_yemen);
+			};
+
 			navigationView.NavigationItemSelected += (sender, e) => {
-				e.MenuItem.SetChecked (true);
 				Console.WriteLine(e.MenuItem.TitleFormatted.ToString());
 				drawerLayout.CloseDrawers ();
 			};

@@ -19,6 +19,8 @@ using supDesign = Android.Support.Design;
 using DrawerLayout = Android.Support.V4.Widget.DrawerLayout;
 using NavigationView = Android.Support.Design.Widget.NavigationView;
 
+using InputMethodManager= Android.Views.InputMethods.InputMethodManager;
+
 namespace Amnesty
 {
 	[Activity (Label = "Form_2")]			
@@ -130,7 +132,7 @@ namespace Amnesty
 
 			// Button
 			// Disable button by default
-			next.Enabled = false; // DEBUG - switch to false
+			next.Enabled = true; // DEBUG - switch to false
 			next.SetBackgroundColor (Android.Graphics.Color.Rgb (225, 225, 225));
 			next.SetTextColor (Android.Graphics.Color.Rgb (175, 175, 175));
 
@@ -194,6 +196,11 @@ namespace Amnesty
 			// Events
 			toolbar.NavigationClick += delegate {
 				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			};
+
+			drawerLayout.DrawerOpened += delegate {
+				InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+				imm.HideSoftInputFromWindow(this.Window.CurrentFocus.WindowToken, 0);
 			};
 
 			// Populate the username once we're sure the header has been inflated

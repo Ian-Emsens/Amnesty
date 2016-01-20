@@ -18,6 +18,8 @@ using supDesign = Android.Support.Design;
 using DrawerLayout = Android.Support.V4.Widget.DrawerLayout;
 using NavigationView = Android.Support.Design.Widget.NavigationView;
 
+using InputMethodManager= Android.Views.InputMethods.InputMethodManager;
+
 namespace Amnesty
 {
 
@@ -84,6 +86,11 @@ namespace Amnesty
 			// Events
 			toolbar.NavigationClick += delegate {
 				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			};
+
+			drawerLayout.DrawerOpened += delegate {
+				InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+				imm.HideSoftInputFromWindow(this.Window.CurrentFocus.WindowToken, 0);
 			};
 
 			// Populate the username once we're sure the header has been inflated

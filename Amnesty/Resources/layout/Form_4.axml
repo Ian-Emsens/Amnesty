@@ -107,7 +107,7 @@
                     style="?android:attr/borderlessButtonStyle"
                     android:textColor="#ff000000"
                     android:text="@string/generic_donate"
-                    android:background="#ffffff00" />
+                    android:background="#ffffed00" />
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

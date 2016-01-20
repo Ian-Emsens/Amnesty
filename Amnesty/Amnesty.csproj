@@ -79,6 +79,7 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
     <None Include="Resources\drawable\home.xml" />
+    <None Include="Resources\colorstate\nav_item.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -613,6 +614,7 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
     <Folder Include="Resources\anim\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\colorstate\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets')" />

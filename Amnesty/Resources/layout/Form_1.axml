@@ -39,6 +39,7 @@
                     android:id="@+id/personal"
                     android:layout_marginTop="10dp" />
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/MyTheme"
@@ -46,7 +47,6 @@
                     android:layout_marginLeft="-5dp"
                     android:layout_marginRight="-5dp">
                     <EditText
-                        android:id="@+id/name"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/form_name"
@@ -54,6 +54,7 @@
                         android:inputType="textCapSentences" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/MyTheme"
@@ -61,7 +62,6 @@
                     android:layout_marginLeft="-5dp"
                     android:layout_marginRight="-5dp">
                     <EditText
-                        android:id="@+id/lastname"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/form_lastname"
@@ -69,6 +69,7 @@
                         android:inputType="textCapSentences" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/birthdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/MyTheme"
@@ -77,14 +78,12 @@
                     android:layout_marginRight="-5dp"
                     android:windowSoftInputMode="stateHidden">
                     <EditText
-                        android:id="@+id/birthdate"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/form_birthdate"
                         android:singleLine="true"
                         android:editable="false"
-                        android:inputType="none"
-                        android:windowSoftInputMode="stateAlwaysHidden" />
+                        android:inputType="datetime" />
                 </android.support.design.widget.TextInputLayout>
                 <LinearLayout
                     android:orientation="horizontal"
@@ -93,6 +92,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center_horizontal">
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/streetP"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight=".80"
@@ -107,13 +107,13 @@
                             android:inputType="textCapSentences" />
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
+                        android:id="@+id/streetNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight=".20"
                         android:theme="@style/MyTheme"
                         android:layout_marginRight="-5dp">
                         <EditText
-                            android:id="@+id/streetNum"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/form_number"
@@ -122,6 +122,7 @@
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/provinceP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/MyTheme"
